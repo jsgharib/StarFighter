@@ -45,15 +45,19 @@ public class AlienHorde {
                 al.setX(0);
                 al.setSpeed(-speedTemp);
             }
-            else if(al.getY() + al.getHeight()> 600){
-                al.setY(0);
-            }
             else{
                 al.setX(al.getX() + al.getSpeed());
             }
         }
     }
-    
+    public boolean damaged(){
+        for(Alien al: aliens){
+            if(al.getY() + al.getHeight() > 600){
+                return true;
+            }
+        }
+        return false;
+    }
     public List<Alien> getList(){
         return aliens;
     }

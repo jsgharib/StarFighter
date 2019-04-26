@@ -39,7 +39,7 @@ public class Bullets {
     public void cleanEmUp() {
         for(int i = 0; i < ammo.size(); i++){
             if(ammo.get(i).isSpent()){
-                ammo.remove(i)
+                ammo.remove(i);
             }
         }
     }
